@@ -16,7 +16,7 @@ get paramsApi(){
  
         'appid': process.env.apiKey,
         'units': 'metric',
-            'lang': 'es' 
+        'lang': 'es' 
 
     }
 }
@@ -27,7 +27,6 @@ async ciudad(lugar= ''){
 
    // console.log('ciudad: ', lugar);
 try {
-// https://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=f75e70010722b1ea194ffae9eddbd41f&units=metric
 const instance = axios.create({
     baseURL: 'https://api.openweathermap.org/data/2.5/weather',
    params: {...this.paramsApi,q: lugar}   
